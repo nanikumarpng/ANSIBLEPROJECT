@@ -1,0 +1,8 @@
+---
+ - name: append the data
+   hosts: paaka
+   tasks:
+    - name: append the data
+      copy: dest=/tmp/sundaraniki42 content="hero nani heroine naziriya nazam played the lead roles"
+      register: naziriya
+    - debug: var=naziriya
