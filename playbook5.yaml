@@ -1,0 +1,8 @@
+---
+ - name: copya a file
+   hosts: paaka
+   tasks:
+    - name: copya file from ansible master to ansible clients
+      copy: src=/tmp/baba42 dest=/tmp/
+      register: rajini
+    - debug: var=rajini.yaml
