@@ -1,0 +1,8 @@
+---
+ - name: fetch the files from clients to server
+   hosts: paaka
+   tasks:
+    - name: fetch the file
+      fetch: src=/tmp/latha dest=/tmp/{{inventory_hostname}}_flatfile flat=yes
+      register: fet
+    - debug: msg={{fet}}
