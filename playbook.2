@@ -1,0 +1,8 @@
+---
+ - name: create a symlink
+   hosts: paaka
+   tasks:
+    - name: create a soft link
+      file: src=/etc/hosts dest=/tmp/sundaraniki42
+      register: bala
+    - debug: var=bala
