@@ -1,0 +1,12 @@
+---
+ - name: synchronize the file from ansible master to ansible clients
+   hosts: paaka
+   tasks:
+     - name: sysnchronize
+       synchronize: src=/etc/passwd dest=/tmp/{{inventory_hostname}}_shekar
+       register: syn
+     - debug: msg={{syn}}
+     - name: fetch
+       fetch: src=/tmp/latha dest=/home/{{inventory_hostname}}_shekar flat=yes
+       register: fet
+     - debug: msg={{fet}}
