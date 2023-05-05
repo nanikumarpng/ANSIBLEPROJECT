@@ -1,0 +1,10 @@
+---
+ - name: useradd with home directory
+   hosts: paaka
+   tasks:
+    - group: name=nara05 state=present
+      register: grp
+    - debug: var=grp
+    - user: name=narayana05 group=nara05  state=present create_home=yes
+      register: usr
+    - debug: var=usr
