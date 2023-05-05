@@ -1,0 +1,8 @@
+---
+ - name: edit the file
+   hosts: paaka
+   tasks:
+    - name: enter the content in file by using the edit module
+      lineinfile: dest=/tmp/sundaraniki42 line=" loves satya narayana from his child hood "
+      register: naga
+    - debug: var=naga
