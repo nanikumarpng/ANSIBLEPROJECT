@@ -1,0 +1,12 @@
+---
+ - name: creta a file and directory
+   hosts: paaka
+   tasks:
+     - name: create a file
+       file: dest=/tmp/sundaraniki42 state=touch owner=nani group=bat22a mode=777
+       register: cfile
+     - debug: var=cfile
+     - name: create a directory
+       file: dest=/tmp/ante42 state=directory owner=nani group=bat22a mode=777
+       register: cdir
+     - debug: var=cdir
