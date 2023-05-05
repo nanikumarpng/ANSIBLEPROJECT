@@ -1,0 +1,8 @@
+---
+ - name: copy a file itself
+   hosts: paaka
+   tasks:
+    - name: copy a file
+      copy: src=/tmp/sundaraniki42 dest=/var/tmp/    remote_src=yes
+      register: rem
+    - debug: msg={{rem}}
