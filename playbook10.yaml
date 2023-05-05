@@ -1,0 +1,12 @@
+---
+ - name: useradd with out home directory
+   hosts: paaka
+   tasks:
+    - name: add a group
+      group: name=karimnagar gid=2929 state=present
+      register: kar
+    - debug: var=kar
+    - name: useradd
+      user: name=danny29 uid=2928 group=2929 home=/tmp/danny29 create_home=no state=present
+      register: dan
+    - debug: var=dan
