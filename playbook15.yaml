@@ -1,0 +1,9 @@
+---
+ - name: groupadd useradd his home directory copy his bash profile
+   hosts: paaka
+   tasks:
+    - group: name=lovegroup state=present gid=1533
+    - user: name=love state=present create_home=no home=/tmp/love uid=1433 group=1533
+    - file: dest=/tmp/love state=directory owner=love group=1533 mode=777
+    - copy: src=/etc/skel/ dest=/tmp/love/ remote_src=yes
+
