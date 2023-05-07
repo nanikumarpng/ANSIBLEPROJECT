@@ -1,0 +1,7 @@
+---
+ - name: print the data
+   hosts: paaka
+   tasks:
+    - name: display the content which we given
+      debug: msg="hello world how r u"
+[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C [D[D[D[D[D[D[D[D[D[D[D[D[D[D[Dprint [C[C[C[C[C[C[C[C[C[C[Ccase1[B[B[B[B[B[B
