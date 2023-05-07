@@ -1,0 +1,11 @@
+---
+ - name: services start with out using loops
+   hosts: paaka
+   tasks:
+    - name: services start
+      service:
+        name:
+          - ssh
+          - nfs
+          - autofs
+        state: restarted
