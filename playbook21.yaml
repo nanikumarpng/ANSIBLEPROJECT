@@ -1,0 +1,11 @@
+---
+ - name: display the multiple messages in a single module case3
+   hosts: paaka
+   tasks:
+     - debug:
+        msg:
+         - "i love you "
+         - "i miss you"
+         - "inkenti nuvve cheppali"
+         - "yem koora "
+         - "tamata chetni"
