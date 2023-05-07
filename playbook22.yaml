@@ -1,0 +1,15 @@
+---
+ - name: with out handler we can perform the same fun  which handler can do
+   hosts: paaka
+   tasks:
+    - copy: src=/tmp/file29 dest=/tmp/nara
+      register: edit
+    - action: service name=httpd state=restarted
+      when: edit.changed
+[root@ansible-master-42 ~]# cat case4.yml
+---
+ - name: grep the specified word from the setup and palybook and scripts
+   hosts: paaka
+   tasks:
+     - debug:
+         msg: "the hostname is:{{inventory_hostname}}"
