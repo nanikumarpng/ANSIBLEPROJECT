@@ -1,0 +1,11 @@
+---
+ - name: service start by using loops
+   hosts: paaka
+   tasks:
+    - name: service start
+      service: name="{{item}}" state=stopped
+      with_items:
+         - httpd
+         - sshd
+         - nfs
+         - autofs
