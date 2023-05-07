@@ -1,0 +1,6 @@
+---
+ - name: using var variable
+   hosts: paaka
+   tasks:
+     - debug:
+         var: inventory_hostname
