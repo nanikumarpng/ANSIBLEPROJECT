@@ -1,0 +1,23 @@
+---
+ - name: handlers case2
+   hosts: paaka
+   tasks:
+    - copy: src=/tmp/file29 dest=/tmp/danny
+      notify: dannyfile
+   handlers:
+    - name: dannyfile
+      service: name=httpd state=restarted
+
+[root@ansible-master-42 ~]# cat case3h.yml
+---
+ - name: handler case3
+   hosts: paaka
+   tasks:
+    - name: copya file
+      copy: src=/tmp/file29 dest=/tmp/hari
+      notify: hari_file
+   handlers:
+    - name: service start
+      service: name=httpd state=restarted
+      listen: hari_file
+[A[A[A[A[A[A[A[A[A[A[A[Ax[D#################################################[B[B[B[B[B[B[B[B[B[B[B[B[B
