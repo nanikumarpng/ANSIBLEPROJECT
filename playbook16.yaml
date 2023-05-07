@@ -1,0 +1,6 @@
+---
+ -  name: yum package installtion
+    hosts: ans-client1-42
+    tasks:
+     - name: yum installtion
+       yum:  name=httpd state=present
