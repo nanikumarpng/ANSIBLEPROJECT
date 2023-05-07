@@ -1,0 +1,13 @@
+---
+ - name: handlers second case
+   hosts: paaka
+   tasks:
+    - service: name=httpd state=restarted
+      notify: nanikumar
+      register: star
+    - debug: "msg={{star}}"
+   handlers:
+    - service: name=httpd enabled=no
+      listen: nanikumar
+      register: enab
+    - debug: "msg={{enab}}"
