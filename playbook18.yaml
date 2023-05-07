@@ -1,0 +1,6 @@
+---
+ - name:  start a services by using this playbook
+   hosts: ans-client1-42
+   tasks:
+    - name:    httpd service start
+      service: name=httpd state=restarted enabled=yes
